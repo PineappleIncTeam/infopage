@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: info
-          image: freenance/info:v1
+          image: freenance/info:{{IMAGE_TAG}}
           resources:
             requests:
               memory: "32Mi"
