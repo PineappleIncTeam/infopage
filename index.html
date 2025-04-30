@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freenance Information Page</title>
     <style>
-        
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 20px;
@@ -14,20 +13,17 @@
             text-align: center;
         }
         
-        
         .logo img {
             width: 200px;
             height: 64px;
             margin-bottom: 20px;
         }
         
-        
         .table-container {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
-        
         
         table {
             width: 1200px;
@@ -37,7 +33,6 @@
             overflow: hidden;
             background-color: #fff;
         }
-        
         
         th {
             background-color: #f2f2f2;
@@ -49,7 +44,6 @@
             letter-spacing: 1px;
         }
 
-        
         td {
             padding: 20px;
             border-bottom: 1px solid #ddd;
@@ -57,7 +51,6 @@
             color: #333;
         }
 
-        
         td a {
             color: #333;
             text-decoration: underline;
@@ -68,7 +61,6 @@
             transition: color 0.3s;
         }
 
-        
         td a:visited {
             color: inherit;
             text-decoration: underline;
@@ -77,7 +69,6 @@
         td a:hover {
             color: #007bff;
         }
-        
         
         .img-cell {
             padding: 0;
@@ -98,16 +89,38 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        
         .img-cell img:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        
-       
+
         tr:last-child td {
             border-bottom: none;
         }
+
+        /* Стиль для блока с графиком */
+        .status-container {
+            margin-top: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .status-container h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            height: 600px;
+        }
+
     </style>
 </head>
 <body>
@@ -155,6 +168,12 @@
             <td class="img-cell"><a href="https://drive.google.com/drive/folders/1qfkI6_CMnSD7TADH4L0X-Dx3rLoqxWqr?usp=drive_link" target="_blank"><img src="google.jpg" alt="Google"></a></td>
         </tr>
     </table>
+</div>
+
+<!-- Блок Status с встроенным iframe -->
+<div class="status-container">
+    <h2>Status</h2>
+    <iframe src="https://grafana.freenance.store/d-solo/NEzutrbMk/blackbox-exporter-http-prober?orgId=1&from=1745993878294&to=1746015478294&timezone=browser&var-job=$__all&var-instance=$__all&var-Filters=&refresh=1m&theme=dark&panelId=2&__feature.dashboardSceneSolo" width="450" height="200" frameborder="0"></iframe>
 </div>
 
 </body>
